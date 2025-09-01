@@ -1,0 +1,7 @@
+php artisan migrate:fresh --seed
+php artisan catalogue:import storage/app/data/universities-and-requirements.txt
+
+
+Scan command
+
+php artisan catalogue:scan storage/app/data/universities-and-requirements.txt --out=storage/app/scan-report.json
