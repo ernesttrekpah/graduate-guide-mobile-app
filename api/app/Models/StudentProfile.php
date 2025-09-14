@@ -5,8 +5,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class StudentProfile extends Model
 {
-    protected $fillable = ['user_id', 'school', 'region', 'graduation_year', 'meta'];
-    protected $casts    = ['meta' => 'array'];
+    protected $fillable = [
+        'user_id',
+        'full_name',
+        'phone',
+        'gender',
+        'graduation_year',
+        'school_name',
+        'region',
+        'meta',
+    ];
+    protected $casts = [
+        'graduation_year' => 'integer',
+        'meta'            => 'array',
+    ];
 
     public function user()
     {return $this->belongsTo(User::class);}

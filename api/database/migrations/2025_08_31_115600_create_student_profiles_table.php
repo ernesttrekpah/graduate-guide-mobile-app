@@ -11,14 +11,24 @@ return new class extends Migration
         Schema::create('student_profiles', function (Blueprint $t) {
             $t->id();
             $t->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $t->string('school')->nullable();
-            $t->string('region')->nullable();
+
+            $t->string('full_name')->nullable();
+            $t->string('phone', 30)->nullable();
+            $t->string('gender')->nullable(); // 'male' | 'female' | 'other'
             $t->unsignedSmallInteger('graduation_year')->nullable();
-            $t->json('meta')->nullable(); // optional extras
+
+            $t->string('school_name')->nullable(); // replaces legacy 'school'
+            $t->string('region')->nullable();
+
+            $t->json('meta')->nullable();
             $t->timestamps();
+
             $t->unique('user_id'); // one profile per user
         });
     }
+
     public function down(): void
-    {Schema::dropIfExists('student_profiles');}
+    {
+        Schema::dropIfExists('student_profiles');
+    }
 };

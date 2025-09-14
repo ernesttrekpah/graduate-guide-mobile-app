@@ -87,6 +87,9 @@ Route::prefix('v1')->group(function () {
         Route::get('/recommendations/runs', [RecommendationController::class, 'index']);
         Route::get('/recommendations/runs/{run}', [RecommendationController::class, 'show']);
 
+        // after other recommendation routes, still inside auth:sanctum group
+        Route::get('/recommendations/items/{item}', [RecommendationController::class, 'showItem']);
+
         // Saved programmes
         Route::get('/student/saved-programmes', [SavedProgrammeController::class, 'index']);
         Route::post('/student/saved-programmes', [SavedProgrammeController::class, 'store']); // {programme_id, note?}

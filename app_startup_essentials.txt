@@ -1,0 +1,23 @@
+php artisan serve --host=0.0.0.0 --port=8000
+
+
+
+/api/ ->  php artisan serve --host=0.0.0.0 --port=8000
+
+/mobile/ -> npx expo start
+
+
+
+
+--Login details
+
+* Usesrname:  ernesttrekpah@gmail.com
+* Password:   12345678
+
+//Admin
+
+username: admin@graduateguide.com
+password: 12345678
+
+
+
