@@ -29,9 +29,9 @@ class RecommendationItem extends Model
     {return $this->belongsTo(Programme::class);}
 
     public function feedback()
-    {
-        return $this->hasMany(Feedback::class, 'recommendation_item_id');
-    }
+    {return $this->hasMany(Feedback::class, 'recommendation_item_id');}
+    public function userFeedback()
+    {return $this->hasOne(Feedback::class, 'recommendation_item_id');} // filtered in controller
 
     // public function jobProspect(){
     //     return $this->belongsTo(JobProspect::class,'');
