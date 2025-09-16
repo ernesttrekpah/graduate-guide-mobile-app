@@ -1,0 +1,47 @@
+1. npm i -g eas-cli
+2. eas login
+
+3. eas build:configure
+
+//app.json
+{
+  "expo": {
+    "name": "GraduateGuide",
+    "slug": "graduateguide",
+    "android": {
+      "package": "com.yourcompany.graduateguide",
+      "versionCode": 1
+    },
+    "extra": {
+      "API_URL": "https://api.your-domain.com/v1"
+    }
+  }
+}
+
+//eas.json sample
+{
+  "cli": { "version": ">= 7.0.0" },
+  "build": {
+    "preview": {
+      "android": { "buildType": "apk" },
+      "env": { "API_URL": "https://api.your-domain.com/v1" }
+    },
+    "production": {
+      "android": { "buildType": "app-bundle" },
+      "env": { "API_URL": "https://api.your-domain.com/v1" }
+    }
+  }
+}
+
+
+
+
+
+4. eas build -p android --profile preview  // for testing
+
+For Play Store release, build an AAB instead:
+
+  eas build -p android --profile production
+
+
+

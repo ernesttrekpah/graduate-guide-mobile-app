@@ -1,8 +1,9 @@
-APP_NAME=Laravel
-APP_ENV=local
-APP_KEY=
+APP_NAME="GraduateGuide"
+APP_ENV=production
+APP_KEY=base64:+e3MstRRBREIv7t/woVx+nw3GHkGFHNxtG88ezQGqrg=
 APP_DEBUG=true
-APP_URL=http://localhost
+# APP_URL=http://0.0.0.0:8000
+APP_URL=https://gguideapi.zaphalnews.com
 
 APP_LOCALE=en
 APP_FALLBACK_LOCALE=en
@@ -20,12 +21,12 @@ LOG_STACK=single
 LOG_DEPRECATIONS_CHANNEL=null
 LOG_LEVEL=debug
 
-DB_CONNECTION=sqlite
-# DB_HOST=127.0.0.1
-# DB_PORT=3306
-# DB_DATABASE=laravel
-# DB_USERNAME=root
-# DB_PASSWORD=
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=zaphaln6_gguideapi
+DB_USERNAME=zaphaln6_gguideuser
+DB_PASSWORD=gguide@zt
 
 SESSION_DRIVER=database
 SESSION_LIFETIME=120
@@ -53,7 +54,7 @@ MAIL_HOST=127.0.0.1
 MAIL_PORT=2525
 MAIL_USERNAME=null
 MAIL_PASSWORD=null
-MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_ADDRESS="hello@gradudateguide.com"
 MAIL_FROM_NAME="${APP_NAME}"
 
 AWS_ACCESS_KEY_ID=
@@ -63,3 +64,20 @@ AWS_BUCKET=
 AWS_USE_PATH_STYLE_ENDPOINT=false
 
 VITE_APP_NAME="${APP_NAME}"
+
+# Common local dev origins (pick what you use)
+CORS_ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:19006,http://127.0.0.1:19006,https://gguideapi.zaphalnews.com/
+
+
+API_PAGE_SIZE_MIN=1
+API_PAGE_SIZE_MAX=50
+API_PAGE_SIZE_DEFAULT=20
+
+RATE_LIMIT_API=120
+RATE_LIMIT_ADMIN=60
+
+APP_VERSION=1.0.0
+APP_COMMIT=abcdef1
+APP_BUILT_AT=2025-08-31T10:00:00Z
+
+

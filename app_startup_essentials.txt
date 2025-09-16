@@ -21,3 +21,6 @@ password: 12345678
 
 
 
+
+//get app/mobile project structure
+npx tree-cli -l 3 -I "node_modules,.git,.expo,android,ios" > project-structure.txt
